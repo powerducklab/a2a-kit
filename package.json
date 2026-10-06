@@ -1,0 +1,73 @@
+{
+  "name": "@powerduck/a2a-kit",
+  "version": "0.1.0",
+  "description": "Isomorphic Agent2Agent (A2A) toolkit: protocol request builders and validators for A2A 1.0/0.3, Agent Card parsing, RFC 8785 canonicalization and JWKS signature verification, plus a runnable A2A server project generator (JSON-RPC, REST and gRPC).",
+  "license": "MIT",
+  "author": "Powerduck limited",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "clean": "rm -rf dist coverage",
+    "build": "tsc --noEmit && tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "example": "node example/export-project.mjs",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "a2a",
+    "agent2agent",
+    "agent-card",
+    "agent-protocol",
+    "json-rpc",
+    "grpc",
+    "sse",
+    "jws",
+    "jwks",
+    "canonicalization",
+    "server-generator",
+    "powerduck"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/powerducklab/a2a-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/powerducklab/a2a-kit/issues"
+  },
+  "homepage": "https://www.powerduck.com/",
+  "dependencies": {
+    "jose": "^6.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "terser": "^5.51.2",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

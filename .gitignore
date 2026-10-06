@@ -1,0 +1,7 @@
+node_modules
+dist
+*.tmp
+.DS_Store
+coverage
+.vscode
+example/generated-a2a-server
