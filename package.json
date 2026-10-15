@@ -1,6 +1,6 @@
 {
   "name": "@powerduck/a2a-kit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Isomorphic Agent2Agent (A2A) toolkit: protocol request builders and validators for A2A 1.0/0.3, Agent Card parsing, RFC 8785 canonicalization and JWKS signature verification, plus a runnable A2A server project generator (JSON-RPC, REST and gRPC).",
   "license": "MIT",
   "author": "Powerduck limited",
@@ -23,7 +23,7 @@
   ],
   "sideEffects": false,
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.12.0"
   },
   "scripts": {
     "clean": "rm -rf dist coverage",

@@ -23,7 +23,7 @@ npm install @powerduck/a2a-kit
 ```
 
 The package ships ESM and CJS bundles plus TypeScript declarations. It runs in modern browsers
-and Node.js 18+. The generated server project itself requires Node.js 22+.
+and Node.js 22.12+. The generated server project itself requires Node.js 22.12+.
 
 ## Build a request example
 
